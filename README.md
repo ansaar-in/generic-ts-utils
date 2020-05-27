@@ -1,17 +1,37 @@
-Extremely basic skeleton code of a Node.js Typescript project with Lint support
+Utility functions for the typescript/javascript project
+
+## Publishing to npm repository
+
+Go to https://www.npmjs.com/ and check if there is an existing npm package with the same name as in the `package.json` file's `name` attribute.
+
+If confirming that your package name is available, run `npm publish` to publish the package to npm repository.
+
+## Installation
+ 
+ - Install in your project using `npm i generic-ts-utils --save`
+
+## Available functions / API
+
+**getMonthFromDate()**
+Gets the month from the date parameter
+- *@param* `date` the date from which month is to be extracted
+
+**isInCurrentMonth()**
+Find if the date is in the current month
+- *@param* `date` the date value
 
 ## Contributions welcome!
 
-[Open a new PR](https://github.com/nordible/node-typescript-template/pulls) here on GitHub.
+[Open a new PR](https://github.com/ansaar-in/generic-ts-utils/pulls) here on GitHub.
 
 ## Run locally
-- Run `git clone https://github.com/nordible/node-typescript-template.git` this project
-- Run `cd node-typescript-template/` to this project
+- Run `git clone https://github.com/ansaar-in/generic-ts-utils.git` this project
+- Run `cd generic-ts-utils/` to this project
 - Run `npm run dev` to start the project on local machine
 
 ## Bugs and Issues
 
-Have a bug or an issue? [Open a new issue](https://github.com/nordible/node-typescript-template/issues) here on GitHub.
+Have a bug or an issue? [Open a new issue](https://github.com/ansaar-in/generic-ts-utils/issues) here on GitHub.
 
 ## License
 
