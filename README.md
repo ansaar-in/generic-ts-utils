@@ -1,10 +1,10 @@
-Utility functions for the typescript/javascript project
+Internal functions used by ansaar.in
 
 ## Publishing to npm repository
 
 Go to https://www.npmjs.com/ and check if there is an existing npm package with the same name as in the `package.json` file's `name` attribute.
 
-If confirming that your package name is available, run `npm publish` to publish the package to npm repository.
+If confirming that your package name is available, run `npm push` to publish the package to npm repository.
 
 ## Installation
  
