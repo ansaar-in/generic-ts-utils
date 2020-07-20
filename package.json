@@ -1,7 +1,7 @@
 {
   "name": "generic-ts-utils",
-  "version": "1.0.1",
-  "description": "Extremely basic template of a Typescript project (supports npm packaging)",
+  "version": "1.0.2",
+  "description": "Internal functions used by ansaar.in",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

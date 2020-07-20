@@ -12,6 +12,11 @@ If confirming that your package name is available, run `npm publish` to publish 
 
 ## Available functions / API
 
+**GenerateLink**
+Generates the shareable link for the stock details page on ansaar.in
+- *@param* `instrument` object with properties: `Name`, `BSECode`, `NSECode` & `Halal`
+
+
 **getMonthFromDate()**
 Gets the month from the date parameter
 - *@param* `date` the date from which month is to be extracted
