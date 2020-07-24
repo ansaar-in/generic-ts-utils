@@ -25,11 +25,22 @@ export const getMonthFromDate = (date: Date) => {
 }
 
 export const GenerateLink = (instrument: any) => {
-    return encodeURI(
-      "/is-it-ethical-to-invest-in?"
-      + (instrument.NSECode ? "NSECode=" + instrument.NSECode : "") +
-      + (instrument.BSECode ? "&BSECode=" + instrument.BSECode : "")
-      + (instrument.Name ? "&Name=" + instrument.Name : "")
-      + "&Halal=" + (instrument.Halal === null ? 0 : 1)
-    )
-  }
+
+    let URL = `/is-it-ethical-to-invest-in?`
+    if (instrument.NSECode) {
+        URL += `NSECode=${instrument.NSECode}&`;
+    }
+    if (instrument.BSECode) {
+        URL += `BSECode=${instrument.BSECode}&`;
+    }
+    if (instrument.Name) {
+        URL += `Name=${instrument.Name}&`;
+    }
+    if (instrument.Halal) {
+        URL += `Halal=1`;
+    } else {
+        URL += `Halal=0`;
+    }
+
+    return encodeURI(URL);
+}
