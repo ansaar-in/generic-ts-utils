@@ -4,7 +4,7 @@ export const isToday = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {
         const currentdate = new Date();
-        if (currentdate === parsedDateTime) {
+        if (currentdate.setHours(0,0,0,0) === parsedDateTime.setHours(0,0,0,0)) {
             return true;
         }
     }
