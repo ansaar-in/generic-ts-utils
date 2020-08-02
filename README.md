@@ -25,6 +25,11 @@ Gets the month from the date parameter
 Find if the date is in the current month
 - *@param* `date` the date value
 
+**isToday**
+Find if the date is today?
+- *@param* `date`  the date value
+
+
 ## Contributions welcome!
 
 [Open a new PR](https://github.com/ansaar-in/generic-ts-utils/pulls) here on GitHub.

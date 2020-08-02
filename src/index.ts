@@ -1,5 +1,15 @@
 import chrono = require('chrono-node');
 
+export const isToday = (dateTime: string) => {
+    const parsedDateTime = chrono.parseDate(dateTime);
+    if (parsedDateTime) {
+        const currentdate = new Date();
+        if (currentdate === parsedDateTime) {
+            return true;
+        }
+    }
+}
+
 export const isInCurrentMonth = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {
