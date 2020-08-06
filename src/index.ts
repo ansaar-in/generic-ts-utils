@@ -27,8 +27,6 @@ export const hasTimePassed = (dateTime: string) => {
     }
 }
 
-console.log(hasTimePassed('2020-08-07T20:23:13.231Z'));
-
 export const isInCurrentMonth = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {
