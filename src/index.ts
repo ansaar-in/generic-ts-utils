@@ -19,8 +19,6 @@ export const hasTimePassed = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {
         const currentdate = new Date();
-        console.log('parsedDateTime', parsedDateTime.getTime())
-        console.log('currentdate.getTime()', currentdate.getTime())
         if (currentdate.getTime() < parsedDateTime.getTime()) {
             return true;
         }
