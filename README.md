@@ -29,6 +29,8 @@ Find if the date is in the current month
 Find if the date is today?
 - *@param* `date`  the date value
 
+ **hasTimePassed**
+The details are part of the JSDoc 
 
 ## Contributions welcome!
 

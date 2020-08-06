@@ -4,11 +4,30 @@ export const isToday = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {
         const currentdate = new Date();
-        if (currentdate.setHours(0,0,0,0) === parsedDateTime.setHours(0,0,0,0)) {
+        if (currentdate.setHours(0, 0, 0, 0) === parsedDateTime.setHours(0, 0, 0, 0)) {
             return true;
         }
     }
 }
+
+/**
+ * Factory function to tell if the time stamp passed as parameter has passed or not
+ * @function hasTimePassed
+ * @param dateTime the timestamp to compare with
+ */
+export const hasTimePassed = (dateTime: string) => {
+    const parsedDateTime = chrono.parseDate(dateTime);
+    if (parsedDateTime) {
+        const currentdate = new Date();
+        console.log('parsedDateTime', parsedDateTime.getTime())
+        console.log('currentdate.getTime()', currentdate.getTime())
+        if (currentdate.getTime() < parsedDateTime.getTime()) {
+            return true;
+        }
+    }
+}
+
+console.log(hasTimePassed('2020-08-07T20:23:13.231Z'));
 
 export const isInCurrentMonth = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
