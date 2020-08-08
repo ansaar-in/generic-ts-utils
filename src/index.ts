@@ -82,7 +82,7 @@ export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
     if (avgPrice < upperCircuitLimit) {
         sellPrice = ((upperCircuitLimit - avgPrice) / 2) + avgPrice;
     }
-    return sellPrice;
+    return RoundDecimalsTo2(sellPrice);
 }
 
 /**
