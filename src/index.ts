@@ -84,3 +84,13 @@ export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
     }
     return sellPrice;
 }
+
+/**
+ * Function to round a number to 2 decimals
+ * @function RoundDecimalsTo2
+ * @param number decimal number to round
+ * @returns number rounded to 2 decimals
+ */
+export const RoundDecimalsTo2 = (number) => {
+    return Math.round((number + Number.EPSILON) * 100) / 100;
+}
