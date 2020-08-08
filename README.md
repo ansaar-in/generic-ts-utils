@@ -32,6 +32,9 @@ Find if the date is today?
  **hasTimePassed**
 The details are part of the JSDoc 
 
+**SuggestStockSalePrice**
+The details are part of the JSDoc
+
 ## Contributions welcome!
 
 [Open a new PR](https://github.com/ansaar-in/generic-ts-utils/pulls) here on GitHub.

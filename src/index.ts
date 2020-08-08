@@ -69,3 +69,18 @@ export const GenerateLink = (instrument: any) => {
 
     return encodeURI(URL);
 }
+
+/**
+ * Function to suggest a profitable stock sale price
+ * @function SuggestStockSalePrice
+ * @param avgPrice average price at which the account holder purchased the shares
+ * @param upperCircuitLimit the upper circuit limit for the instrument / stock
+ * @returns suggestedStockSalePrice
+ */
+export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
+    let sellPrice = 0;
+    if (avgPrice < upperCircuitLimit) {
+        sellPrice = ((upperCircuitLimit - avgPrice) / 2) + avgPrice;
+    }
+    return sellPrice;
+}
