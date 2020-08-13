@@ -11,6 +11,14 @@ export const isToday = (dateTime: string) => {
 }
 
 /**
+ * Function to parse input as date
+ * @param dateTime date time
+ */
+export const parseDate = (dateTime: string) => {
+    return chrono.parseDate(dateTime);
+}
+
+/**
  * Factory function to tell if the time stamp passed as parameter has passed or not
  * @function hasTimePassed
  * @param dateTime the timestamp to compare with

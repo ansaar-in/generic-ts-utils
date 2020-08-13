@@ -37,6 +37,8 @@ The API details are part of the JSDoc
 
 **SuggestStockSalePrice**
 
+**parseDate**
+
 ## Contributions welcome!
 
 [Open a new PR](https://github.com/ansaar-in/generic-ts-utils/pulls) here on GitHub.
