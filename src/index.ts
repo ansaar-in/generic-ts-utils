@@ -79,21 +79,6 @@ export const GenerateLink = (instrument: any) => {
 }
 
 /**
- * Function to suggest a profitable stock sale price
- * @function SuggestStockSalePrice
- * @param avgPrice average price at which the account holder purchased the shares
- * @param upperCircuitLimit the upper circuit limit for the instrument / stock
- * @returns suggestedStockSalePrice
- */
-export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
-    let sellPrice = 0;
-    if (avgPrice < upperCircuitLimit) {
-        sellPrice = ((upperCircuitLimit - avgPrice) / 2) + avgPrice;
-    }
-    return RoundDecimalsTo2(sellPrice);
-}
-
-/**
  * Function to round a number to 2 decimals
  * @function RoundDecimalsTo2
  * @param number decimal number to round
@@ -101,4 +86,17 @@ export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
  */
 export const RoundDecimalsTo2 = (number) => {
     return Math.round((number + Number.EPSILON) * 100) / 100;
+}
+
+/**
+ * Function to suggest a profitable stock sale price
+ * @function SuggestStockSalePrice
+ * @param avgPrice average price at which the account holder purchased the shares
+ * @param upperCircuitLimit the upper circuit limit for the instrument / stock
+ * @returns suggestedStockSalePrice
+ */
+export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
+    if (avgPrice < upperCircuitLimit) {
+        return RoundDecimalsTo2(((upperCircuitLimit - avgPrice) / 2) + avgPrice);
+    }
 }
