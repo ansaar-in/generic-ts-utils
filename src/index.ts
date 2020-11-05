@@ -97,6 +97,13 @@ export const RoundDecimalsTo2 = (number) => {
  */
 export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
     if (avgPrice < upperCircuitLimit) {
-        return RoundDecimalsTo2(((upperCircuitLimit - avgPrice) / 2) + avgPrice);
+        let suggestion = RoundDecimalsTo2(((upperCircuitLimit - avgPrice) / 2) + avgPrice);
+        // tick = 0.05 according to Zerodha
+        const suggestionCentury = suggestion * 100,
+            tick = suggestionCentury % 5;
+        if (tick !== 0) {
+            suggestion = (suggestionCentury - tick) / 100;
+        }
+        return suggestion;
     }
 }
