@@ -107,3 +107,11 @@ export const SuggestStockSalePrice = (avgPrice, upperCircuitLimit) => {
         return suggestion;
     }
 }
+
+export const sleep = (ms: number) => {
+    return new Promise((res, rej) => {
+        setTimeout(async () => {
+            res();
+        }, ms);
+    });
+}
