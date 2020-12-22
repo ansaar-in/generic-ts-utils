@@ -33,6 +33,21 @@ export const hasTimePassed = (dateTime: string) => {
     }
 }
 
+/**
+ * Factory function to tell if the time stamp passed as parameter is future or not
+ * @function isTimeFuture
+ * @param dateTime the timestamp to compare with
+ */
+export const isTimeFuture = (dateTime: string) => {
+    const parsedDateTime = chrono.parseDate(dateTime);
+    if (parsedDateTime) {
+        const currentdate = new Date();
+        if (currentdate.getTime() > parsedDateTime.getTime()) {
+            return true;
+        }
+    }
+}
+
 export const isInCurrentMonth = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {

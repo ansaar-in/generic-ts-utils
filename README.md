@@ -33,6 +33,8 @@ The API details are part of the JSDoc
 
 **hasTimePassed**
 
+**isTimeFuture**
+
 **RoundDecimalsTo2**
 
 **SuggestStockSalePrice**
