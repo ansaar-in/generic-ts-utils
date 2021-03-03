@@ -42,7 +42,7 @@ export const isTimeFuture = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {
         const currentdate = new Date();
-        if (currentdate.getTime() > parsedDateTime.getTime()) {
+        if (parsedDateTime.getTime() > currentdate.getTime()) {
             return true;
         }
     }
