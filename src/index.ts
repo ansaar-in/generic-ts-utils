@@ -48,6 +48,10 @@ export const isTimeFuture = (dateTime: string) => {
     }
 }
 
+export const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
+}
+
 export const isInCurrentMonth = (dateTime: string) => {
     const parsedDateTime = chrono.parseDate(dateTime);
     if (parsedDateTime) {

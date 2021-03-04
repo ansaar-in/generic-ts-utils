@@ -33,6 +33,8 @@ The API details are part of the JSDoc
 
 **hasTimePassed**
 
+**capitalizeFirstLetter**
+
 **isTimeFuture**
 
 **RoundDecimalsTo2**
